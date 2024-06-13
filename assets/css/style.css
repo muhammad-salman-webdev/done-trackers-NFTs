@@ -41,20 +41,83 @@ p {
 }
 
 /* Regular CSS */
+/* Background Styling */
+/* Animations */
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@-webkit-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@-moz-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@-ms-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
 .stars_BG {
   position: fixed;
   inset: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   background-color: #030303;
   z-index: -1;
 
-  .star {
+  .stars,
+  .twinkling {
     position: absolute;
-    background: #4a4a4a;
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .stars {
+    background: #000 url(../images/bg/stars.png) repeat top center;
+    z-index: 0;
+    animation: move-twink-back 5000s linear infinite;
+  }
+
+  .twinkling {
+    background: transparent url(../images/bg/twinkling.png) repeat top center;
+    z-index: 1;
+    /* -moz-animation: move-twink-back 200s linear infinite;
+    -ms-animation: move-twink-back 200s linear infinite;
+    -o-animation: move-twink-back 200s linear infinite;
+    -webkit-animation: move-twink-back 200s linear infinite; */
+    animation: move-twink-back 200s linear infinite;
   }
 }
 
@@ -110,7 +173,8 @@ p {
         }
       }
 
-      .res-menu-close-btn {
+      .res-menu-close-btn,
+      .stars_BG {
         display: none;
       }
     }
