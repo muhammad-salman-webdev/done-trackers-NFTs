@@ -3,10 +3,25 @@
     line-height: 28px;
   }
 
-  .hero-content {
-    h1 {
-      font-size: 54px;
-      line-height: 75px;
+  h1 {
+    font-size: 54px;
+    line-height: 75px;
+  }
+
+  h3 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .hero-steps-container {
+    .hero-steps {
+      ul {
+        li {
+          p {
+            max-width: 280px;
+          }
+        }
+      }
     }
   }
 }
@@ -29,9 +44,8 @@
         align-items: center;
         gap: 30px;
         z-index: 3;
-        transition: all .4s ease;
+        transition: all .4s linear;
         overflow: hidden;
-        /* background-image: url('../images/stars_BG.png'); */
         background-size: 100% auto;
         background-position: center center;
 
@@ -86,6 +100,8 @@
   }
 
   body:has(input#res_menu_toggle:checked) {
+    overflow: hidden;
+
     .res-menu-overlay {
       z-index: 2;
       opacity: 1;
@@ -95,23 +111,69 @@
       left: 0;
     }
   }
+
+  .hero-steps-container {
+    .hero-steps {
+      &::before {
+        width: 2px;
+        left: 40px;
+        top: 60px;
+        bottom: 80px;
+        height: unset;
+        background: linear-gradient(0deg, #17E3A6 0%, #FF669F 100%);
+      }
+
+      ul {
+        li {
+          max-width: 100%;
+          gap: 20px;
+          padding: 20px 0;
+
+          p {
+            max-width: 100%;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 767px) {
-  .hero-content {
-    h1 {
-      font-size: 44px;
-      line-height: 55px;
+  h1 {
+    font-size: 44px;
+    line-height: 55px;
+  }
+
+  h3 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .hero-steps-container {
+    .hero-steps {
+      ul {
+        li {
+          padding: 0px 0;
+        }
+      }
     }
   }
 }
 
 @media (max-width: 575px) {
-  .hero-content {
-    h1 {
-      font-size: 38px;
-      line-height: 48px;
-    }
+  h1 {
+    font-size: 38px;
+    line-height: 48px;
+  }
+
+  h3 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  h4 {
+    font-size: 22px;
   }
 
   .header-section {
@@ -133,10 +195,17 @@
 }
 
 @media (max-width: 400px) {
-  .hero-content {
-    h1 {
-      font-size: 34px;
-      line-height: 44px;
-    }
+  h1 {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  h3 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  h4 {
+    font-size: 20px;
   }
 }
