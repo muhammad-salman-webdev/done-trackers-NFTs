@@ -296,12 +296,14 @@ section:has(.bg_gradients) {
     inset: 0;
     margin: 0 auto;
     z-index: -1;
+    overflow: hidden;
+    max-width: 1800px;
+    top: -100px;
 
     .g-green {
-      background: #17E3A6B2;
       background: radial-gradient(50% 50% at 50% 50%, #18e9aa37 10%, rgba(224, 209, 255, 0) 100%);
       width: 1200px;
-      left: -200px;
+      left: -50px;
       top: -700px;
       opacity: .9;
       aspect-ratio: 1;
@@ -310,7 +312,17 @@ section:has(.bg_gradients) {
       z-index: -1;
     }
 
-    .g-red {}
+    .g-red {
+      background: radial-gradient(50% 50% at 50% 50%, #e92d1837 10%, rgba(224, 209, 255, 0) 100%);
+      width: 1200px;
+      right: -200px;
+      bottom: -700px;
+      opacity: .9;
+      aspect-ratio: 1;
+      position: absolute;
+      max-width: 100vw;
+      z-index: -1;
+    }
   }
 }
 
