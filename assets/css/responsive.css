@@ -1,4 +1,35 @@
+@media (max-width:1399px) {
+  section:has(.bg_gradients) {
+    .bg_gradients {
+      .g-green {
+        width: 1000px;
+        left: -100px;
+        top: -400px;
+      }
+
+      .g-red {
+        width: 900px;
+        right: -300px;
+        bottom: -300px;
+      }
+    }
+  }
+}
+
 @media (max-width:1199px) {
+  section:has(.bg_gradients) {
+    .bg_gradients {
+      .g-green {
+        width: 800px;
+        top: -300px;
+      }
+
+      .g-red {
+        width: 800px;
+      }
+    }
+  }
+
   p {
     line-height: 28px;
   }
@@ -27,6 +58,16 @@
 }
 
 @media (max-width:992px) {
+  section:has(.bg_gradients) {
+    .bg_gradients {
+      .g-green {
+        width: 850px;
+        top: -250px;
+        left: -150px;
+      }
+    }
+  }
+
   .header-section {
     & .header-container {
       justify-content: space-between;
@@ -141,6 +182,16 @@
 }
 
 @media (max-width: 767px) {
+  section:has(.bg_gradients) {
+    .bg_gradients {
+      .g-green {
+        width: 650px;
+        top: -150px;
+        left: -210px;
+      }
+    }
+  }
+
   h1 {
     font-size: 44px;
     line-height: 55px;
