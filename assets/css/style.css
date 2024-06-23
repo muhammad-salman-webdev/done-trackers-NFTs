@@ -24,11 +24,16 @@ select {
 
 :root {
   --primary-gradient: linear-gradient(96.14deg, #A81AFF 2.56%, #FF669F 98.61%);
+  --primary: #17E3A6;
 }
 
 ::selection {
   background: #16e7b6;
   color: #000000;
+}
+
+img::selection {
+  background: #16e7b61b;
 }
 
 h1,
@@ -124,6 +129,18 @@ p {
 
   to {
     background-position: -10000px 5000px;
+  }
+}
+
+@keyframes moveUpDown {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20px);
   }
 }
 
@@ -298,7 +315,7 @@ section:has(.bg_gradients) {
     margin: 0 auto;
     z-index: -1;
     top: -100px;
-    overflow: hidden;
+    max-width: 1400px;
 
     .g-green {
       background: radial-gradient(50% 50% at 50% 50%, #18e9aa37 10%, rgba(224, 209, 255, 0) 100%);
@@ -399,6 +416,191 @@ section:has(.bg_gradients) {
 
         ;
       }
+    }
+  }
+}
+
+/* Community-MarketPlace Section  */
+.nft-marketplace-section {
+  padding: 90px 0;
+  background: #13131382;
+
+  .nft-m-container {
+    &>h3 {
+      text-align: center;
+      margin-bottom: 20px;
+      max-width: 90vw;
+    }
+
+    ._imgs {
+      margin: 50px 0;
+      display: flex;
+      position: relative;
+      justify-content: center;
+
+      div {
+        position: relative;
+        width: 375px;
+        top: 70px;
+
+        &:first-child {
+          left: 190px;
+        }
+
+        &:nth-child(2) {
+          top: 0;
+          z-index: 3;
+        }
+
+        &:last-child {
+          left: -190px;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    ._content {
+      display: flex;
+      padding: 75px 50px;
+      background: var(--primary);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+      position: relative;
+      margin-top: -160px;
+
+      h3 {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38.4px;
+        color: #030303;
+        margin: 0;
+        position: relative;
+        z-index: 4;
+      }
+
+      div {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+        margin-top: -10px;
+
+        a {
+          display: block;
+          border-radius: 50%;
+          animation: moveUpDown 2s infinite;
+          transition: all .3s ease;
+
+          img {
+            width: 100%;
+            transition: all .3s ease;
+            user-select: none;
+            -webkit-user-drag: none;
+            -moz-user-drag: none;
+            -ms-user-drag: none;
+          }
+
+          &:hover {
+            img {
+              margin-left: -5%;
+              width: 110%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* NFT Section */
+section.nft-section {
+  overflow: hidden;
+  padding: 90px 0;
+  position: relative;
+
+  .gradients {
+    position: absolute;
+    inset: 0;
+  }
+
+  .nft-m-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+  }
+
+  .nft-card {
+    &>* {
+      padding: 20px;
+      display: block;
+      border-radius: 10px;
+      border: 1px solid #0B543E;
+      background: linear-gradient(102.17deg, rgba(23, 227, 166, 0.2) 0.47%, rgba(23, 227, 166, 0) 121.14%);
+      border-radius: 10px;
+    }
+
+    .nft-body {
+      overflow: hidden;
+      margin: 0 0 15px 0;
+
+      .nft-img {
+        img {
+          border-radius: 15px;
+          width: 100%
+        }
+      }
+
+      .nft-dtl {
+        &>span {
+          color: rgb(0, 255, 140) !important;
+          display: block;
+          margin: 20px 0 5px 0;
+          line-height: normal;
+        }
+
+        &>p {
+          margin: 0;
+          line-height: normal;
+        }
+
+        div {
+          display: flex;
+          justify-content: space-between;
+          margin: 20px 0 00 0;
+          align-items: center;
+
+          p {
+            margin: 0;
+            line-height: normal;
+          }
+
+          span {
+            display: block;
+            color: green;
+            line-height: normal;
+          }
+        }
+      }
+    }
+
+    a {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 26.4px;
+      text-decoration: none;
+      font-family: "JetBrains Mono", monospace;
+      color: var(--primary);
     }
   }
 }
