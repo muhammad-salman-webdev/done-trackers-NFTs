@@ -102,6 +102,15 @@
       }
     }
   }
+
+  section.nft-section {
+    .gradients {
+      .g1 {
+        left: -260px;
+        top: -450px;
+      }
+    }
+  }
 }
 
 @media (max-width:992px) {
@@ -245,6 +254,15 @@
       }
     }
   }
+
+  section.nft-section {
+    .gradients {
+      .g2 {
+        right: -650px;
+        bottom: -500px;
+      }
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -299,6 +317,24 @@
       }
     }
   }
+
+  section.nft-section {
+    .gradients {
+      .g1 {
+        width: 800px;
+        aspect-ratio: unset;
+        height: 1000px;
+        left: -230px;
+        top: -390px;
+      }
+    }
+  }
+
+  section.nft-section .nft-m-container .nft-container,
+  .collections-filter-section .g-nft-container {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 575px) {
@@ -345,6 +381,67 @@
       }
     }
   }
+
+  .collections-filter-section {
+    padding: 60px 0;
+
+    .filter-header {
+      .filter-btns {
+        gap: 15px;
+        max-width: 94vw;
+        overflow: auto;
+
+        button {
+          padding: 10px 0 15px;
+          font-size: 16px;
+        }
+
+        /* First Child */
+        &:has(button:first-child:hover)::after {
+          transform: translateX(0px) !important;
+          width: 56px !important;
+        }
+
+        &:has(button:first-child.active)::after {
+          transform: translateX(0px);
+          width: 56px;
+        }
+
+        /* 2nd Child */
+        &:has(button:nth-child(2):hover)::after {
+          transform: translateX(66px) !important;
+          width: 89px !important;
+        }
+
+        &:has(button:nth-child(2).active)::after {
+          transform: translateX(66px);
+          width: 89px;
+        }
+
+        /* 3rd Child */
+        &:has(button:nth-child(3):hover)::after {
+          transform: translateX(166px) !important;
+          width: 104px !important;
+        }
+
+        &:has(button:nth-child(3).active)::after {
+          transform: translateX(166px);
+          width: 104px;
+        }
+
+        /* Last Child */
+        &:has(button:last-child:hover)::after {
+          transform: translateX(282px) !important;
+          width: 84px !important;
+        }
+
+        &:has(button:last-child.active)::after {
+          transform: translateX(282px);
+          width: 84px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 500px) {
@@ -377,6 +474,14 @@
         }
       }
     }
+  }
+
+  section.nft-section .nft-m-container .nft-container {
+    width: 90%;
+  }
+
+  .collections-filter-section .g-nft-container {
+    width: 100%;
   }
 }
 
@@ -414,5 +519,9 @@
         }
       }
     }
+  }
+
+  section.nft-section .nft-m-container .nft-container {
+    width: 100%;
   }
 }
