@@ -16,9 +16,13 @@ body {
 }
 
 a,
+a:hover,
 button,
+button:hover,
 input,
-select {
+input:hover,
+select,
+select:hover {
   cursor: url('../images/cursors/cursor-hover-2.png'), auto;
 }
 
@@ -32,8 +36,8 @@ select {
   color: #000000;
 }
 
-img::selection {
-  background: #16e7b61b;
+a {
+  text-decoration: none;
 }
 
 h1,
@@ -88,6 +92,66 @@ p {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.lr-g-btns {
+  display: flex;
+  gap: 20px;
+
+  >button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    border: none;
+    outline: none;
+    color: white;
+    width: 66px;
+    height: 46px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+
+    & i {
+      position: relative;
+      z-index: 3;
+    }
+
+    &::before,
+    &::after {
+      transition: all .5s ease;
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      opacity: 0;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+
+      &::after {
+        opacity: 0;
+      }
+    }
+
+    &:last-child::after,
+    &:first-child::before {
+      background: linear-gradient(102.17deg, rgba(32, 80, 115, 0.496) 37%, rgba(32, 80, 115, 0) 121.14%);
+    }
+
+    &:first-child::after,
+    &:last-child::before {
+      background: linear-gradient(102.17deg, rgba(32, 80, 115, 0.216) .14%, rgba(32, 80, 115, 0.496) 100%);
+    }
+  }
 }
 
 /* Regular CSS */
@@ -675,7 +739,6 @@ section.nft-section {
 /* Grid NFT Card Section with Filter Function */
 .collections-filter-section {
   padding: 80px 0;
-  margin-bottom: 70vh;
 
   .filter-header {
     .filter-btns {
