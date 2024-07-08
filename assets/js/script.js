@@ -4,16 +4,14 @@ $(document).ready(function () {
     var value = $(this).attr("data-filter");
 
     if (value == "all") {
-      $(".filter_nft_card").show("1000");
+      $(".filter_nft_card").show("10000");
     } else {
-      //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-      //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
       $(".filter_nft_card")
         .not("." + value)
-        .hide("3000");
+        .hide("30000");
       $(".filter_nft_card")
         .filter("." + value)
-        .show("3000");
+        .show("30000");
     }
   });
 
@@ -22,7 +20,6 @@ $(document).ready(function () {
   }
   $(this).addClass("active");
   allFilterBtns[0].click();
-  console.log(allFilterBtns);
 });
 
 allFilterBtns.forEach((btn, i) => {
