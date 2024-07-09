@@ -398,6 +398,28 @@
       top: -200px;
     }
   }
+
+  .newsletter-section {
+    & .container {
+      & div {
+        .newsletter-content {
+          padding: 40px 20px 0 20px;
+
+          & .newsletter-form {
+            & form {
+              input {
+                padding: 0px 160px 0 30px;
+              }
+
+              button {
+                padding: 0 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 575px) {
@@ -620,6 +642,29 @@
 
   .collections-filter-section .g-nft-container {
     width: 100%;
+  }
+
+  .newsletter-section {
+    & .container {
+      & div {
+        .newsletter-content {
+          & .newsletter-form {
+            & form {
+              bottom: -25px;
+
+              input {
+                height: 60px;
+                padding: 0 140px 0 25px;
+              }
+
+              button {
+                padding: 0 20px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 

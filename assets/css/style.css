@@ -11,7 +11,7 @@
 }
 
 body {
-  cursor: url('../images/cursors/cursor-2.png'), auto;
+  cursor: url('../images/cursors/cursor-2.png'), auto !important;
   overflow-x: hidden;
 }
 
@@ -23,7 +23,7 @@ input,
 input:hover,
 select,
 select:hover {
-  cursor: url('../images/cursors/cursor-hover-2.png'), auto;
+  cursor: url('../images/cursors/cursor-hover-2.png'), auto !important;
 }
 
 :root {
@@ -1185,6 +1185,8 @@ section.nft-section {
 
 /* NewsLetter Section */
 .newsletter-section {
+  margin: 50px 0 80px;
+
   .container {
     position: relative;
 
@@ -1226,19 +1228,50 @@ section.nft-section {
           form {
             max-width: 700px;
             width: 100%;
-            background: orange;
             display: flex;
             position: absolute;
             bottom: -35px;
+            background: rgba(255, 255, 255, 0.286);
+            backdrop-filter: blur(6px);
+            overflow: hidden;
+            border-radius: 50px;
 
             input {
               height: 70px;
+              border-radius: 50px;
               width: 100%;
+              background: transparent;
+              border: none;
+              outline: none;
+              color: white;
+              border: 1px solid white;
+              padding: 0 220px 0 35px;
+              font-family: 'Figtree';
+              font-size: 16px;
+              font-weight: 500;
+
+              &::placeholder {
+                color: white;
+              }
             }
 
             button {
+              border: none;
+              outline: none;
               min-width: max-content;
               padding: 0 60px;
+              border-radius: 50px;
+              background: transparent;
+              border: 1px solid white;
+              position: absolute;
+              right: 0;
+              top: 0;
+              bottom: 0;
+              font-family: 'Figtree';
+              font-size: 16px;
+              font-weight: 700;
+              color: #17E3A6;
+              text-transform: uppercase;
             }
           }
         }
