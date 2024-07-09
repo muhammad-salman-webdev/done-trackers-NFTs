@@ -1462,68 +1462,88 @@
       <!-- Title -->
       <h3 class="text-center mx-auto mb-5">Explore Our Top NFT Art Works</h3>
       <!-- Slider -->
-      <div class="nft-r-slider-container">
+      <div class="nft-r-slider-container py-lg-4">
         <div id="nft-r-card-slider" class="splide">
           <div class="splide__track">
             <ul class="splide__list">
               <!-- Card -->
               <li class="splide__slide">
                 <div class="card">
-                  <img src="assets/images/nfts/nft-1.png" alt="#" />
+                  <a href="#">
+                    <img src="assets/images/nfts/nft-1.png" alt="#" />
+                  </a>
                 </div>
               </li>
               <!-- Card -->
               <li class="splide__slide">
                 <div class="card">
-                  <img src="assets/images/nfts/nft-2.png" alt="#" />
+                  <a href="#">
+                    <img src="assets/images/nfts/nft-2.png" alt="#" />
+                  </a>
                 </div>
               </li>
               <!-- Card -->
               <li class="splide__slide">
                 <div class="card">
-                  <img src="assets/images/nfts/nft-3.png" alt="#" />
+                  <a href="#">
+                    <img src="assets/images/nfts/nft-3.png" alt="#" />
+                  </a>
                 </div>
               </li>
               <!-- Card -->
               <li class="splide__slide">
                 <div class="card">
-                  <img src="assets/images/nfts/nft-1.png" alt="#" />
+                  <a href="#">
+                    <img src="assets/images/nfts/nft-1.png" alt="#" />
+                  </a>
                 </div>
               </li>
               <!-- Card -->
               <li class="splide__slide">
                 <div class="card">
-                  <img src="assets/images/nfts/nft-2.png" alt="#" />
+                  <a href="#">
+                    <img src="assets/images/nfts/nft-2.png" alt="#" />
+                  </a>
                 </div>
               </li>
               <!-- Card -->
               <li class="splide__slide">
                 <div class="card">
-                  <img src="assets/images/nfts/nft-1.png" alt="#" />
+                  <a href="#">
+                    <img src="assets/images/nfts/nft-1.png" alt="#" />
+                  </a>
                 </div>
               </li>
               <!-- Card -->
               <li class="splide__slide">
                 <div class="card">
-                  <img src="assets/images/nfts/nft-2.png" alt="#" />
+                  <a href="#">
+                    <img src="assets/images/nfts/nft-2.png" alt="#" />
+                  </a>
                 </div>
               </li>
               <!-- Card -->
               <li class="splide__slide">
                 <div class="card">
-                  <img src="assets/images/nfts/nft-3.png" alt="#" />
+                  <a href="#">
+                    <img src="assets/images/nfts/nft-3.png" alt="#" />
+                  </a>
                 </div>
               </li>
               <!-- Card -->
               <li class="splide__slide">
                 <div class="card">
-                  <img src="assets/images/nfts/nft-1.png" alt="#" />
+                  <a href="#">
+                    <img src="assets/images/nfts/nft-1.png" alt="#" />
+                  </a>
                 </div>
               </li>
               <!-- Card -->
               <li class="splide__slide">
                 <div class="card">
-                  <img src="assets/images/nfts/nft-2.png" alt="#" />
+                  <a href="#">
+                    <img src="assets/images/nfts/nft-2.png" alt="#" />
+                  </a>
                 </div>
               </li>
             </ul>
@@ -1557,100 +1577,6 @@
 
   <!-- Splider CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-
-  <!-- Splider Script -->
-  <script>
-    const splide = new Splide(".splide", {
-      type: "loop",
-      pagination: false,
-      arrows: false,
-      speed: 1000,
-    });
-    splide.mount();
-
-    // Add event listeners to custom buttons
-    document
-      .querySelector(
-        ".artist_splid_btns.lr-g-btns > button:has(.fa-arrow-left)"
-      )
-      .addEventListener("click", function () {
-        splide.go("<");
-      });
-
-    document
-      .querySelector(
-        ".artist_splid_btns.lr-g-btns > button:has(.fa-arrow-right)"
-      )
-      .addEventListener("click", function () {
-        splide.go(">");
-      });
-  </script>
-
-  <!-- NFT Rotated Cards Splider Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const nftRsplide = new Splide("#nft-r-card-slider", {
-        type: "loop",
-        perPage: 5,
-        perMove: 1,
-        gap: "1rem",
-        pagination: false,
-        arrows: false,
-        breakpoints: {
-          768: {
-            perPage: 2,
-          },
-          480: {
-            perPage: 1,
-          },
-        },
-      }).mount();
-
-      // Add event listeners to custom buttons
-      document
-        .querySelector(
-          ".nft-r-slider_btns.lr-g-btns > button:has(.fa-arrow-left)"
-        )
-        .addEventListener("click", function () {
-          nftRsplide.go("<");
-        });
-
-      document
-        .querySelector(
-          ".nft-r-slider_btns.lr-g-btns > button:has(.fa-arrow-right)"
-        )
-        .addEventListener("click", function () {
-          nftRsplide.go(">");
-        });
-
-      // Making cards rotated
-
-      function makingCardsRotated() {
-        console.log("hi");
-        const allNFTrCards = document.querySelectorAll(
-          "#nft-r-card-slider li.splide__slide.is-visible"
-        );
-        console.log(allNFTrCards);
-        const cardsCount = allNFTrCards.length;
-
-        console.log(cardsCount);
-
-        if (cardsCount === 5) {
-          allNFTrCards[0].classList.add("_s_prev_");
-          allNFTrCards[1].classList.add("_prev_");
-          allNFTrCards[2].classList.add("_center_");
-          allNFTrCards[3].classList.add("_next_");
-          allNFTrCards[4].classList.add("_s_next_");
-        } else if (cardsCount === 3) {
-          allNFTrCards[0].classList.add("_prev_");
-          allNFTrCards[1].classList.add("_center_");
-          allNFTrCards[2].classList.add("_next_");
-        }
-      }
-      makingCardsRotated();
-      window.addEventListener("resize", makingCardsRotated);
-    });
-  </script>
 
   <!-- Custom JavaScript -->
   <script src="assets/js/script.js"></script>

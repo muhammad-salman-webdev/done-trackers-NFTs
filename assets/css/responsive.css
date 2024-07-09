@@ -529,6 +529,19 @@
       }
     }
   }
+
+  /* making cards rotate */
+  #nft-r-card-slider {
+    li.splide__slide {
+      &._next_ .card {
+        transform: translate(60px, 60px) rotate(24deg);
+      }
+
+      &._prev_ .card {
+        transform: translate(-60px, 60px) rotate(-24deg);
+      }
+    }
+  }
 }
 
 @media (max-width: 500px) {

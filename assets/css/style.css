@@ -1092,18 +1092,66 @@ section.nft-section {
 .nft-r-slider-section {
   max-width: 1600px;
   overflow: hidden;
+  height: 800px;
   margin: 0 auto;
 
+  .splide__track {
+    overflow: visible;
+  }
+
   .splide__slide {
-    aspect-ratio: 295.68 / 419.93;
-    overflow: hidden;
     display: flex;
     justify-content: center;
-    border-radius: 15px;
+    aspect-ratio: 295.68 / 419.93;
 
     div {
+      border-radius: 15px;
+      overflow: hidden;
+      aspect-ratio: 295.68 / 419.93;
       position: absolute;
-      width: 145%;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+
+      img {
+        left: -22.5%;
+        width: 145%;
+        position: relative;
+      }
+    }
+  }
+}
+
+/* making cards rotate */
+#nft-r-card-slider {
+  li.splide__slide {
+    .card {
+      transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      opacity: 0;
+    }
+
+    &._next_ .card {
+      transform: translate(83px, 40px) rotate(15deg);
+    }
+
+    &._s_next_ .card {
+      transform: translate(145px, 160px) rotate(28deg);
+    }
+
+    &._prev_ .card {
+      transform: translate(-83px, 40px) rotate(-15deg);
+    }
+
+    &._s_prev_ .card {
+      transform: translate(-145px, 160px) rotate(-28deg);
+    }
+
+    &._next_ .card,
+    &._s_next_ .card,
+    &._center_ .card,
+    &._prev_ .card,
+    &._s_prev_ .card {
+      opacity: 1;
     }
   }
 }
