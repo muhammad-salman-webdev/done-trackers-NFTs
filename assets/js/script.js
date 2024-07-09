@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     speed: 700,
     autoPlay: true,
     breakpoints: {
-      800: {
+      768: {
         perPage: 3,
       },
     },
