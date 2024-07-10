@@ -1279,3 +1279,62 @@ section.nft-section {
     }
   }
 }
+
+/* Footer Section */
+.footer-section {
+  padding: 50px 0 0 0;
+
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 40px 0;
+
+    a {
+      width: 200px;
+      display: block;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .footer-links {
+    padding: 10px 0;
+    border-bottom: 1px solid white;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 0 30px;
+
+      li a {
+        font-family: 'Figtree';
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19.2px;
+        color: white;
+      }
+    }
+  }
+
+  .lower-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 20px;
+
+    div {
+      ul {
+        display: flex;
+        gap: 10px;
+
+        li a img {
+          width: 24px;
+        }
+      }
+    }
+  }
+}
