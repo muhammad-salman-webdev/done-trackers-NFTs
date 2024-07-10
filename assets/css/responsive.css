@@ -123,6 +123,17 @@
       top: -160px;
     }
   }
+
+  .header-section {
+    & .header-container {
+      & .nav-btns {
+        .navbar ul {
+          margin: 0 20px 0 0;
+          gap: 20px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width:992px) {
@@ -314,6 +325,24 @@
       }
     }
   }
+
+  /* ---------------- */
+  /* ---------------- */
+  /* - Contact Page - */
+  /* ---------------- */
+  /* ---------------- */
+  /* Contact Section */
+  .contact-section {
+    .contact-form-container {
+      padding: 0 20px;
+    }
+
+    .map-container {
+      margin: 50px 0 70px;
+      min-height: 500px;
+      width: 98%;
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -458,6 +487,10 @@
         left: -100vw;
       }
     }
+  }
+
+  .res-menu-overlay {
+    left: 100vw;
   }
 
   ._btn-light {

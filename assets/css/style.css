@@ -84,6 +84,8 @@ p {
   min-width: max-content;
   padding: 18px 36px;
   background: var(--primary-gradient);
+  border: none;
+  outline: none;
   border-radius: 12px;
   font-family: "Figtree";
   font-size: 16px;
@@ -1336,5 +1338,77 @@ section.nft-section {
         }
       }
     }
+  }
+}
+
+/* ---------------- */
+/* ---------------- */
+/* - Contact Page - */
+/* ---------------- */
+/* ---------------- */
+/* Contact Section */
+.contact-section {
+  padding: 90px 0;
+
+  .contact-form-container {
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        label {
+          color: white;
+          font-family: 'Figtree';
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 24px;
+          text-align: left;
+        }
+
+        input,
+        textarea {
+          border-radius: 12px;
+          height: 70px;
+          border: 1px solid #FFFFFF29;
+          background: linear-gradient(90deg, rgba(255, 102, 159, 0.1) 0%, rgba(23, 227, 166, 0.1) 100%);
+          font-family: 'Figtree';
+          font-size: 16px;
+          font-weight: 500;
+          color: #ffffff;
+          transition: all .3s ease;
+          outline: none;
+          padding: 0 20px;
+
+          &::placeholder {
+            color: #C4C4C4;
+          }
+
+          &:focus {
+            border: 1px solid #ffffff8b;
+          }
+        }
+
+        textarea {
+          padding: 20px;
+          min-height: 150px;
+          max-height: 300px;
+        }
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  .map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 0;
   }
 }
