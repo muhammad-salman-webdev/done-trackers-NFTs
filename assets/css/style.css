@@ -10,6 +10,10 @@
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   cursor: url('../images/cursors/cursor-2.png'), auto !important;
   overflow-x: hidden;
@@ -76,14 +80,24 @@ p {
   line-height: 28px;
 }
 
+strong {
+  font-family: 'Figtree';
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.6px;
+  color: #16FEFF;
+}
+
 /* Body & HTML */
 /* Primary Reusable Classes */
 ._btn-light {
-  display: block;
+  display: flex;
   width: max-content;
   min-width: max-content;
   padding: 18px 36px;
   background: var(--primary-gradient);
+  word-wrap: normal;
+  word-break: keep-all;
   border: none;
   outline: none;
   border-radius: 12px;
@@ -1410,5 +1424,83 @@ section.nft-section {
     border-radius: 12px;
     overflow: hidden;
     padding: 0;
+  }
+}
+
+.about-f-section {
+  .about-imgs {
+    border: 1px solid #17e3a65e;
+    background: linear-gradient(102.17deg, rgba(23, 227, 166, 0.2) 0.47%, rgba(23, 227, 166, 0) 121.14%);
+    padding: 0 12px 24px;
+    border-radius: 16px;
+  }
+}
+
+.about-project-section {
+  .gradients {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    z-index: -1;
+
+    .g1 {
+      background: radial-gradient(50% 50% at 50% 50%, #18e9aa37 10%, rgba(224, 209, 255, 0) 100%);
+      width: 1400px;
+      margin-top: -300px;
+      aspect-ratio: 1/1;
+      max-width: 90vw;
+      opacity: .9;
+    }
+  }
+
+  .guide-cards-row {
+    margin: 40px 0;
+
+    &>.col {
+      &>div {
+        background: linear-gradient(102.17deg, rgba(32, 80, 115, 0.64) 0.47%, rgba(32, 80, 115, 0) 121.14%);
+        border: 1px solid #50ffff5e;
+        border-radius: 18px;
+        display: flex;
+        flex-direction: column;
+        padding: 18px;
+        gap: 16px;
+        height: 100%;
+
+        img {
+          width: 32px;
+        }
+
+        span {
+          font-family: 'Figtree';
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 24px;
+          text-align: left;
+          color: white;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.detailed-info-section {
+  .gradients {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    z-index: -1;
+
+    .g1 {
+      background: radial-gradient(50% 50% at 50% 50%, #FF669F26 10%, rgba(224, 209, 255, 0) 100%);
+      width: 1400px;
+      margin-top: -150px;
+      aspect-ratio: 1/1;
+      max-width: 90vw;
+      opacity: .9;
+    }
   }
 }

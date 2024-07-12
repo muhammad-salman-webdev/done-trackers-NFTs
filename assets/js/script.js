@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
     focus: "center",
     pagination: false,
     arrows: false,
-    speed: 700,
+    speed: 1000,
     autoPlay: true,
     breakpoints: {
       768: {
